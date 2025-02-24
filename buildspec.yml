@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install  # Installiere Abhängigkeiten
+  build:
+    commands:
+      - npm run build  # Erstelle den Production Build
+      - npm test  # Führe die Tests aus
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist  # Das Verzeichnis, das nach dem Build bereitgestellt wird
