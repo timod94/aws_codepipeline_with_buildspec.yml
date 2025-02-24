@@ -1,8 +1,13 @@
 version: 0.2
+
 phases:
   install:
     commands:
-      - pip install pytest  # Beispiel für Python
+      - pip install pytest  # Installiere pytest
   build:
     commands:
       - pytest test.py  # Führe die Tests aus
+
+artifacts:
+  files:
+    - '**/*'
